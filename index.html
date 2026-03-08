@@ -2,17 +2,112 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/escape.jpg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ada Fen | ADAFEN.MUSIC</title>
-    <meta name="description" content="Ada Fen is an experimental music project blending songwriting, AI collaboration, and visual storytelling into late-night electronic pop." />
-    <meta property="og:title" content="Ada Fen | ADAFEN.MUSIC" />
-    <meta property="og:description" content="Experimental electronic pop. Late-night vibes." />
-    <meta property="og:image" content="/escape.jpg" />
+
+    <!-- Primary SEO -->
+    <title>Ada Fen | Electronic Pop &amp; Synthwave Artist</title>
+    <meta name="description" content="Ada Fen makes late-night electronic pop and synthwave. Stream Escape, Sentiment, and Portsmouth — experimental music blending AI, songwriting, and visual storytelling." />
+    <meta name="keywords" content="Ada Fen, electronic pop, synthwave, late night music, AI music, experimental electronic, Escape album, Sentiment EP, Portsmouth, Amber Heinbockel, adafen" />
+    <meta name="author" content="Ada Fen" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://adafenmusic.com" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="/escape.jpg" />
+    <link rel="apple-touch-icon" href="/escape.jpg" />
+
+    <!-- Open Graph (Facebook, iMessage, Discord, Slack previews) -->
+    <meta property="og:type" content="music.musician" />
+    <meta property="og:site_name" content="Ada Fen" />
+    <meta property="og:title" content="Ada Fen — Electronic Pop &amp; Synthwave" />
+    <meta property="og:description" content="Late-night electronic pop blending AI collaboration, songwriting, and visual storytelling. Stream Escape, Sentiment, and Portsmouth now." />
+    <meta property="og:image" content="https://adafenmusic.com/escape.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Ada Fen – Escape album cover art" />
     <meta property="og:url" content="https://adafenmusic.com" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter / X Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <script type="module" crossorigin src="/assets/index-D-JP4vJl.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-sc1Y-dj7.css">
+    <meta name="twitter:site" content="@adafen" />
+    <meta name="twitter:title" content="Ada Fen — Electronic Pop &amp; Synthwave" />
+    <meta name="twitter:description" content="Late-night electronic pop blending AI collaboration, songwriting, and visual storytelling. Stream Escape, Sentiment, and Portsmouth now." />
+    <meta name="twitter:image" content="https://adafenmusic.com/escape.jpg" />
+    <meta name="twitter:image:alt" content="Ada Fen – Escape album cover art" />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "MusicGroup",
+          "@id": "https://adafenmusic.com/#artist",
+          "name": "Ada Fen",
+          "url": "https://adafenmusic.com",
+          "image": "https://adafenmusic.com/escape.jpg",
+          "description": "Ada Fen is an experimental electronic pop and synthwave artist creating late-night music that blends AI collaboration, songwriting, and visual storytelling.",
+          "genre": ["Electronic", "Synthwave", "Electronic Pop", "Experimental"],
+          "sameAs": [
+            "https://www.instagram.com/adafenmusic",
+            "https://open.spotify.com/artist/4pT3QiPRBxjnk3VCFMuqlr",
+            "https://distrokid.com/hyperfollow/adafen/escape"
+          ],
+          "album": [
+            {
+              "@type": "MusicAlbum",
+              "@id": "https://adafenmusic.com/#escape",
+              "name": "Escape",
+              "byArtist": { "@id": "https://adafenmusic.com/#artist" },
+              "datePublished": "2026",
+              "genre": ["Electronic", "Synthwave"],
+              "image": "https://adafenmusic.com/escape.jpg",
+              "url": "https://distrokid.com/hyperfollow/adafen/escape",
+              "track": [
+                { "@type": "MusicRecording", "name": "Golden Hour", "byArtist": { "@id": "https://adafenmusic.com/#artist" } },
+                { "@type": "MusicRecording", "name": "After Glow", "byArtist": { "@id": "https://adafenmusic.com/#artist" } },
+                { "@type": "MusicRecording", "name": "No Signal", "byArtist": { "@id": "https://adafenmusic.com/#artist" } },
+                { "@type": "MusicRecording", "name": "For Tonight", "byArtist": { "@id": "https://adafenmusic.com/#artist" } },
+                { "@type": "MusicRecording", "name": "Another City", "byArtist": { "@id": "https://adafenmusic.com/#artist" } },
+                { "@type": "MusicRecording", "name": "Static Between", "byArtist": { "@id": "https://adafenmusic.com/#artist" } }
+              ]
+            },
+            {
+              "@type": "MusicAlbum",
+              "albumProductionType": "EPRelease",
+              "@id": "https://adafenmusic.com/#sentiment",
+              "name": "Sentiment",
+              "byArtist": { "@id": "https://adafenmusic.com/#artist" },
+              "datePublished": "2025",
+              "genre": ["Electronic", "Late Night"],
+              "url": "https://distrokid.com/hyperfollow/adafen/sentiment"
+            },
+            {
+              "@type": "MusicAlbum",
+              "albumProductionType": "SingleRelease",
+              "@id": "https://adafenmusic.com/#portsmouth",
+              "name": "Portsmouth",
+              "byArtist": { "@id": "https://adafenmusic.com/#artist" },
+              "datePublished": "2025",
+              "genre": ["Electronic", "Synthwave"],
+              "url": "https://distrokid.com/hyperfollow/adafen/portsmouth"
+            }
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://adafenmusic.com/#website",
+          "url": "https://adafenmusic.com",
+          "name": "Ada Fen",
+          "description": "Official website for Ada Fen — electronic pop and synthwave artist.",
+          "publisher": { "@id": "https://adafenmusic.com/#artist" }
+        }
+      ]
+    }
+    </script>
+    <script type="module" crossorigin src="/assets/index-fgqAfbj9.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DjEt-YAu.css">
   </head>
   <body>
     <div id="root"></div>
