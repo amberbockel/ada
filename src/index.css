@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-black text-white font-sans antialiased;
+    /* Deep space void background behind the image */
+    background-color: #030008;
+    background-attachment: fixed;
+    min-height: 100vh;
+    margin: 0;
+    overflow-x: hidden;
+  }
+
+  /* SVG Noise Overlay */
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 50;
+    /* High frequency noise */
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    opacity: 0.12;
+    mix-blend-mode: overlay;
+  }
+}
+
+@layer utilities {
+  .bloom-hover {
+    transition: text-shadow 0.4s ease, color 0.4s ease;
+  }
+  .bloom-hover:hover {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.7), 0 0 40px rgba(255, 255, 255, 0.3);
+    color: #fff;
+  }
+  
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  /* Cyberpunk / EXE HUD Specifics */
+  .clip-hud {
+    clip-path: polygon(40px 0, 100% 0, 100% calc(100% - 40px), calc(100% - 40px) 100%, 0 100%, 0 40px);
+  }
+
+  /* The main outermost HUD frame that dips in around the top-left logo */
+  .clip-hud-main {
+    clip-path: polygon(
+      0 80px,                  /* Start below logo */
+      280px 80px,              /* Over across bottom of logo */
+      330px 0,                 /* Angle up past logo */
+      100% 0,                  /* Top Right Corner */
+      100% calc(100% - 40px),  /* Down Right Side */
+      calc(100% - 40px) 100%,  /* Angle Bottom Right */
+      0 100%                   /* Bottom Left Corner */
+    );
+  }
+
+  .clip-button {
+    clip-path: polygon(15px 0, 100% 0, 100% calc(100% - 15px), calc(100% - 15px) 100%, 0 100%, 0 15px);
+  }
+
+  .clip-thumb {
+    clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+  }
+
+  .glitch-text {
+    position: relative;
+  }
+
+  .glitch-text::before,
+  .glitch-text::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+  }
+
+  .glitch-text:hover::before {
+    left: 2px;
+    text-shadow: -2px 0 red;
+    animation: glitch-anim 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+  }
+
+  .glitch-text:hover::after {
+    left: -2px;
+    text-shadow: -2px 0 cyan;
+    animation: glitch-anim 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite reverse;
+  }
+
+  @keyframes glitch-anim {
+    0% { clip-path: inset(80% 0 10% 0); transform: translate(-2px, 1px); }
+    20% { clip-path: inset(10% 0 60% 0); transform: translate(2px, -1px); }
+    40% { clip-path: inset(40% 0 30% 0); transform: translate(1px, 2px); }
+    60% { clip-path: inset(90% 0 5% 0); transform: translate(-1px, -2px); }
+    80% { clip-path: inset(30% 0 50% 0); transform: translate(2px, 1px); }
+    100% { clip-path: inset(60% 0 20% 0); transform: translate(-2px, -1px); }
+  }
+
+  .scanline-bg {
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0) 50%,
+      rgba(0, 0, 0, 0.2) 50%,
+      rgba(0, 0, 0, 0.2)
+    );
+    background-size: 100% 4px;
+  }
+}
