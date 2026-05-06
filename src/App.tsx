@@ -3,13 +3,22 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const albums = [
   {
+    id: 'SUM',
+    title: 'SUMMER SATISFACTION',
+    desc: 'The intoxicating high of a perfect summer moment — the kind you know won\'t last. Warm synths and hazy beats capture the feeling of fully surrendering to something beautiful, even knowing it\'s temporary.',
+    image: 'https://i.scdn.co/image/ab67616d00001e02e6b41916697691a7aef4cdcc',
+    url: 'https://open.spotify.com/track/1SobjteKKkDspDbDTfPSOK',
+    spotifyId: '15skPrwds32YJ0SDw0dRc6',
+    techData: 'LATEST SINGLE // RELEASE DATE: MAY 2026 // GENRE: ELECTRONIC / SYNTHWAVE'
+  },
+  {
     id: 'ESC',
     title: 'ESCAPE',
     desc: 'Escape is about stepping outside the noise and disappearing into your own world for a while. Pulsing beats and atmospheric synths create a soundtrack for late-night drives, empty streets, and the freedom of letting go.',
     image: '/escape.jpg',
     url: 'https://distrokid.com/hyperfollow/adafen/escape',
     spotifyId: '6nghejF21TFcogzQ8HalEK',
-    techData: 'LATEST SINGLE // RELEASE DATE: 2026 // GENRE: ELECTRONIC / SYNTHWAVE'
+    techData: 'SINGLE // RELEASE DATE: 2026 // GENRE: ELECTRONIC / SYNTHWAVE'
   },
   {
     id: 'SNT',
